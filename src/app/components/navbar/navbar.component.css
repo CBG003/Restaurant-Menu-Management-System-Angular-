@@ -1,0 +1,10 @@
+.btn:hover{
+    background-color: rgb(148, 28, 84);
+    color: white;
+    border: none;
+}
+.dropdown-item:hover{
+    background-color: rgb(148, 28, 84);;
+    color: white;
+    border: none;
+}

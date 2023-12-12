@@ -1,0 +1,60 @@
+  <!-- Form for adding/editing appetizer -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <form *ngIf="!isEditing" (submit)="addAppetizer()">
+          <!-- Add appetizer form fields -->
+          <div class="mb-3">
+            <label for="appetizerName">Name:</label>
+            <input type="text" id="appetizerName" name="appetizerName" [(ngModel)]="appetizerForm['name']" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="appetizerPrice">Price:</label>
+            <input type="number" id="appetizerPrice" name="appetizerPrice" [(ngModel)]="appetizerForm['price']" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="appetizerImageUrl">Image:</label>
+            <input type="file" id="appetizerImageUrl" (change)="handleImageUpload($event)" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-success custom-btn">Add Appetizer</button>
+        </form>
+  
+        <form *ngIf="isEditing" (submit)="updateAppetizer()" class="form-group">
+          <!-- Edit appetizer form fields -->
+          <div class="mb-3">
+            <label for="appetizerName">Name:</label>
+            <input type="text" id="appetizerName" name="appetizerName" [(ngModel)]="appetizerForm['name']" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="appetizerPrice">Price:</label>
+          <input type="number" id="appetizerPrice" name="appetizerPrice" [(ngModel)]="appetizerForm['price']" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="appetizerImageUrl">Image:</label>
+          <input type="file" id="appetizerImageUrl" (change)="handleImageUpload($event)" class="form-control" required>
+        </div>
+          <button type="submit" class="btn btn-warning custom-btn">Update Appetizer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- appetizers.component.html -->
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let appetizer of appetizers">
+      <div class="card">
+      <img [src]="appetizer.imageUrl" class="card-img-top custom-img" alt="{{ appetizer.name }} promo">
+      <div class="card-body">
+      <h5 class="card-title">{{ appetizer.name }}</h5>
+      <p class="card-text">{{ appetizer.price }} DT</p>
+      <button class="btn btn-info custom-btn" (click)="editAppetizer(appetizer)">Edit</button>
+      <button class="btn btn-danger custom-btn ml-2" (click)="deleteAppetizer(appetizer.id)">Delete</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>

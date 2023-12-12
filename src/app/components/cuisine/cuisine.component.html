@@ -1,0 +1,35 @@
+<div class="container p-4">
+  <div class="row">
+    <h2>Our Appetizer</h2>
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let appetizer of appetizers">
+      <div class="card">
+        <img [src]="appetizer.imageUrl" class="card-img-top custom-img" alt="{{ appetizer.name }} promo">
+        <h4 class="card-title">{{ appetizer.name }}</h4>
+        <p class="card-text">{{ appetizer.price }} DT</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h2>Our Dishes</h2>
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let dish of dishes">
+      <div class="card">
+        <img [src]="dish.imageUrl" class="card-img-top custom-img" alt="{{ dish.name }} promo">
+        <div class="card-body">
+          <h5 class="card-title">{{ dish.name }}</h5>
+          <p class="card-text">{{ dish.price }} DT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h2>Our Desserts</h2>
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let burger of burgers">
+      <div class="card">
+        <img [src]="burger.imageUrl" class="card-img-top custom-img" alt="{{ burger.name }} promo">
+        <div class="card-body">
+          <h5 class="card-title">{{ burger.name }}</h5>
+          <p class="card-text">{{ burger.price }} DT</p>
+      </div>
+    </div>
+  </div>
+</div>

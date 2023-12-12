@@ -1,0 +1,29 @@
+h4{
+    color:rgb(49, 44, 37);
+}
+/* Add this to your component's CSS file or style section */
+.custom-img {
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  }
+  
+  .hvr:hover{
+    background-color: rgb(148, 28, 84);;
+    color:rgb(254, 254, 254);
+    
+}
+
+
+.custom-btn:hover{
+    background-color: rgb(148, 28, 84);
+
+}
+.custom-btn{
+    background-color: rgb(108, 105, 105);
+    border-color: rgb(58, 57, 57);
+    color:rgb(254, 254, 254);
+    
+}
+.custom-btn{
+    color:rgb(254, 254, 254);
+}
